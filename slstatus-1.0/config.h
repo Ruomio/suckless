@@ -66,10 +66,10 @@ static const char unknown_str[] = "n/a";
 static const struct arg args[] = {
 	/* function format                           argument */
 	{ kernel_release,           "|%s",           NULL },
-	{ battery_perc,             "|Bat %s%%",     "BATT" },
+	{ battery_perc,             "|Bat %2s%%",     "BATT" },
 	{ battery_state,            " %s",           "BATT" },
-	{ ram_perc,                 "|Mem %s%%",     NULL },
-	{ cpu_perc,                 "|Cpu %s%%",     NULL },
+	{ ram_perc,                 "|Mem %2s%%",     NULL },
+	{ cpu_perc,                 "|Cpu %2s%%",     NULL },
 	// { vol_perc,                 "|%s%%",         "/dev/mixer" },
 	{ datetime,                 "|%s",           "%F %T" },
 };
