@@ -70,6 +70,6 @@ static const struct arg args[] = {
 	{ battery_state,            " %s",           "BATT" },
 	{ ram_perc,                 "|Mem %2s%%",     NULL },
 	{ cpu_perc,                 "|Cpu %2s%%",     NULL },
-	// { vol_perc,                 "|%s%%",         "/dev/mixer" },
+	{ run_command,              "|Vol %s",         "amixer get Master | awk -F'[][]' '/Playback/ {volume=$2} END {if (volume) print volume}'" },
 	{ datetime,                 "|%s",           "%F %T" },
 };

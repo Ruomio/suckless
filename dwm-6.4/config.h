@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
 /* appearance */
-static const unsigned int borderpx  = 8;        /* border pixel of windows */
+static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -51,8 +51,8 @@ static const Layout layouts[] = {
 	{ "[M]",      monocle },
 };
 
-/* key definitions */
-#define MODKEY Mod1Mask
+/* key definitions  Mod1Mask : ALT;  Mod4Mask : WIN*/
+#define MODKEY Mod1Mask 
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -78,6 +78,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_q,      spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_e,      spawn,          {.v = explorecmd } },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("flameshot gui") },
+	{ MODKEY|ControlMask,           XK_a,      spawn,          SHCMD("slock") },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
