@@ -68,7 +68,7 @@ static const struct arg args[] = {
 	{ kernel_release,           "|%s",           NULL },
 	{ battery_perc,             "|Bat %2s%%",     "BATT" },
 	{ battery_state,            " %s",           "BATT" },
-	{ ram_perc,                 "|Mem %2s%%",     NULL },
+	{ ram_used,                 "|Mem %2s",     NULL },
 	{ cpu_perc,                 "|Cpu %2s%%",     NULL },
 	{ run_command,              "|Vol %s",         "amixer get Master | awk -F'[][]' '/Playback/ {volume=$2} END {if (volume) print volume}'" },
 	{ datetime,                 "|%s",           "%F %T" },
